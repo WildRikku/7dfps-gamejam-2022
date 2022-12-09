@@ -172,6 +172,7 @@ namespace Unity.FPS.Gameplay
 
         void Update()
         {
+            /*
             // check for Y kill
             if (!IsDead && transform.position.y < KillHeight)
             {
@@ -212,7 +213,7 @@ namespace Unity.FPS.Gameplay
             }
 
             UpdateCharacterHeight(false);
-
+            */
             HandleCharacterMovement();
         }
 
