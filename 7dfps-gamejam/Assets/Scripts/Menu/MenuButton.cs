@@ -56,7 +56,7 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (isClick == false)
         {
-            audioSource.PlayOneShot(click_sound, 1F);
+            audioSource.PlayOneShot(click_sound);
             isClick = true;
         }
     }
