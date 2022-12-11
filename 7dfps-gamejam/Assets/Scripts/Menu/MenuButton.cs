@@ -11,11 +11,15 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     private AudioClip click_sound;
     private AudioClip hover_sound;
 
-    private Text obj_text;
-    private int initFontSize;
-    private int hoverFontSize;
-    private Color initColor;
-    private Color hoverColor;
+    //private Text obj_text;
+    //private int initFontSize;
+    //private int hoverFontSize;
+    //private Color initColor;
+    //private Color hoverColor;
+
+    private Sprite currentButtonImage;
+    public Sprite hoverButtonImage;
+    public Button button;
 
     private bool isClick = false;
 
@@ -25,30 +29,37 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         audioSource = canvas.GetComponent<AudioSource>();
         
         screenManager = canvas.GetComponent<ScreenManager>();
-        hoverColor = screenManager.buttonHoverColor;
+        //hoverColor = screenManager.buttonHoverColor;
         hover_sound = screenManager.hover_sound;
         click_sound = screenManager.click_sound;
-        hoverFontSize = screenManager.buttonTextHoverSize;
+        //hoverFontSize = screenManager.buttonTextHoverSize;
 
-        obj_text = GetComponentInChildren<Text>();
-        initColor = obj_text.color;
-        initFontSize = obj_text.fontSize;
+        //obj_text = GetComponentInChildren<Text>();
+        //initColor = obj_text.color;
+        //initFontSize = obj_text.fontSize;
+
+        currentButtonImage = button.image.sprite;
     }
 
     //Mouse enter
     public void OnPointerEnter(PointerEventData eventData)
     {
-        obj_text.color = hoverColor;
-        obj_text.fontSize = hoverFontSize;
+        //obj_text.color = hoverColor;
+        //obj_text.fontSize = hoverFontSize;
+
         audioSource.clip = hover_sound;
         audioSource.Play();
+
+        button.image.sprite = hoverButtonImage;
     }
 
     //Mouse leave
     public void OnPointerExit(PointerEventData eventData)
     {
-        obj_text.color = initColor;
-        obj_text.fontSize = initFontSize;
+        //obj_text.color = initColor;
+        //obj_text.fontSize = initFontSize;
+
+        button.image.sprite = currentButtonImage;
     }
 
     //Mouse click
@@ -60,5 +71,6 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             isClick = true;
         }
     }
+
 
 }
