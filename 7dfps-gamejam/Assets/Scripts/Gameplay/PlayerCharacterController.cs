@@ -51,7 +51,9 @@ namespace Unity.FPS.Gameplay
         public float AimingRotationMultiplier = 0.4f;
 
         [Header("Jump")] [Tooltip("Force applied upward when jumping")]
-        public float JumpForce = 9f;
+        private float JumpBaseForce = 9F;
+        public float JumpForce = 9F;
+        public float JumpPadForce = 20f;
 
         [Header("Stance")] [Tooltip("Ratio (0-1) of the character height where the camera will be at")]
         public float CameraHeightRatio = 0.9f;
@@ -168,6 +170,9 @@ namespace Unity.FPS.Gameplay
             // force the crouch state to false when starting
             SetCrouchingState(false, true);
             UpdateCharacterHeight(true);
+
+            //JumpPad
+            JumpBaseForce = JumpForce;
         }
 
         void Update()
@@ -473,6 +478,43 @@ namespace Unity.FPS.Gameplay
 
             IsCrouching = crouched;
             return true;
+        }
+
+        //Made by Martin
+        private void OnControllerColliderHit(ControllerColliderHit hit)
+        {
+            switch(hit.gameObject.tag)
+            {
+                case "JumpPad":
+                    JumpForce = JumpPadForce;
+
+                    //Jump Scrip kopiert
+                    //--------------------------
+                    // start by canceling out the vertical component of our velocity
+                    CharacterVelocity = new Vector3(CharacterVelocity.x, 0f, CharacterVelocity.z);
+
+                    // then, add the jumpSpeed value upwards
+                    CharacterVelocity += Vector3.up * JumpForce;
+
+                    // play sound
+                    AudioSource.PlayOneShot(JumpSfx);
+
+                    // remember last time we jumped because we need to prevent snapping to ground for a short time
+                    m_LastTimeJumped = Time.time;
+                    HasJumpedThisFrame = true;
+
+                    // Force grounding to false
+                    IsGrounded = false;
+                    m_GroundNormal = Vector3.up;
+
+                    //--------------------------
+                    break;
+                case "Ground":
+                    JumpForce = JumpBaseForce;
+                break;
+            }
+
+            Debug.Log(hit.gameObject.tag);
         }
     }
 }
