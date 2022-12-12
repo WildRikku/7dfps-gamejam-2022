@@ -1,6 +1,7 @@
 ﻿using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.Events;
+using System.Collections;
 
 namespace Unity.FPS.Gameplay
 {
@@ -54,6 +55,7 @@ namespace Unity.FPS.Gameplay
         private float JumpBaseForce = 9F;
         public float JumpForce = 9F;
         public float JumpPadForce = 20f;
+        public ParticleSystem jumpParticle;
 
         [Header("Stance")] [Tooltip("Ratio (0-1) of the character height where the camera will be at")]
         public float CameraHeightRatio = 0.9f;
@@ -489,6 +491,11 @@ namespace Unity.FPS.Gameplay
                 case "JumpPad":
                     JumpForce = JumpPadForce;
 
+                    jumpParticle.Play();
+                    /*var emission = jumpParticle.emission;
+                    emission.enabled = true;
+                    */
+
                     //Jump Scrip kopiert
                     //--------------------------
                     // start by canceling out the vertical component of our velocity
@@ -508,6 +515,7 @@ namespace Unity.FPS.Gameplay
                     IsGrounded = false;
                     m_GroundNormal = Vector3.up;
 
+                    
                     //--------------------------
                     break;
                 case "Ground":
@@ -515,7 +523,9 @@ namespace Unity.FPS.Gameplay
                 break;
             }
 
-            Debug.Log(hit.gameObject.tag);
+            //Debug.Log(hit.gameObject.tag);
         }
+
+        
     }
 }
