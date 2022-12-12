@@ -1794,10 +1794,11 @@ MonoBehaviour:
   CrouchingSharpness: 10
   FootstepSfxFrequency: 1
   FootstepSfxFrequencyWhileSprinting: 1
-  FootstepSfx: {fileID: 8300000, guid: 87d16822da1ca9445bf01dd8af23830e, type: 3}
-  JumpSfx: {fileID: 8300000, guid: 740b2be4a78722b43b639cfdd22b45f4, type: 3}
-  LandSfx: {fileID: 8300000, guid: 740b2be4a78722b43b639cfdd22b45f4, type: 3}
-  FallDamageSfx: {fileID: 8300000, guid: 740b2be4a78722b43b639cfdd22b45f4, type: 3}
+  FootstepSfx: {fileID: 8300000, guid: 183021e6e2e12ab45880b96aa9995aeb, type: 3}
+  JumpSfx: {fileID: 8300000, guid: bc44fee044e85b64dadf211cbb129aba, type: 3}
+  LandSfx: {fileID: 8300000, guid: f69e9abdaeac6034ca1358259eacbeb6, type: 3}
+  JumpPadSfx: {fileID: 8300000, guid: 7ae3a116f5184c147a45c617f9e11451, type: 3}
+  FallDamageSfx: {fileID: 8300000, guid: f69e9abdaeac6034ca1358259eacbeb6, type: 3}
   RecievesFallDamage: 0
   MinSpeedForFallDamage: 10
   MaxSpeedForFallDamage: 30

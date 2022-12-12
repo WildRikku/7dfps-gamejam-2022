@@ -78,6 +78,7 @@ namespace Unity.FPS.Gameplay
 
         [Tooltip("Sound played when jumping")] public AudioClip JumpSfx;
         [Tooltip("Sound played when landing")] public AudioClip LandSfx;
+        [Tooltip("Sound played when JumpPad")] public AudioClip JumpPadSfx;
 
         [Tooltip("Sound played when taking damage froma fall")]
         public AudioClip FallDamageSfx;
@@ -497,7 +498,7 @@ namespace Unity.FPS.Gameplay
                     CharacterVelocity += Vector3.up * JumpForce;
 
                     // play sound
-                    AudioSource.PlayOneShot(JumpSfx);
+                    AudioSource.PlayOneShot(JumpPadSfx);
 
                     // remember last time we jumped because we need to prevent snapping to ground for a short time
                     m_LastTimeJumped = Time.time;
