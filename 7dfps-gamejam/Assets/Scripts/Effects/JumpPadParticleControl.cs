@@ -3,33 +3,20 @@ using UnityEngine;
 
 public class JumpPadParticleControl : MonoBehaviour
 {
-    public ParticleSystem hitParticle;
-    public bool moduleEnabled = false;
+    public ParticleSystem engineParticle;
+    public GameObject engineGO;
+    public bool engineEnable = false;
 
     private void Start()
     {
-        var emission = hitParticle.emission;
+        //engine particle system on/off
+        var emission = engineParticle.emission;
+        emission.enabled = engineEnable;
 
-        emission.enabled = moduleEnabled;
-
+        //engine mesh on/off
+        engineGO.GetComponent<MeshRenderer>().enabled = engineEnable;
     }
 
-    public void onCollionEnter(Collision collision)
-    {
-        var emission = hitParticle.emission;
-
-        emission.enabled = true;
-        StartCoroutine("test");
-        Debug.Log(collision.gameObject);
-    }
-
-    private IEnumerable test()
-    {
-
-        var emission = hitParticle.emission;
-        emission.enabled = false;
-
-        yield return new WaitForSeconds(.1f);
-    }
+    
 
 }
