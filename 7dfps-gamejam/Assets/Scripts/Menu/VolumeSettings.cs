@@ -13,20 +13,24 @@ public class VolumeSettings : MonoBehaviour
 
     void Awake()
     {
+        
         musicSlider.onValueChanged.AddListener(SetMusicVolume);
     }
 
-    private void Start()
+    void Start()
     {
+        //load volume value from PlayerPrefs
         musicSlider.value = PlayerPrefs.GetFloat(AudioManager.MUSIC_KEY, 1f);
     }
-    private void OnDisable()
+    void OnDisable()
     {
+        //save value in PlayerPrefs
         PlayerPrefs.SetFloat(AudioManager.MUSIC_KEY, musicSlider.value);
     }
 
     void SetMusicVolume(float value)
     {
+        //set mixer Volume
         mixer.SetFloat(MIXER_MUSIC, Mathf.Log10(value) *20);
     }
 

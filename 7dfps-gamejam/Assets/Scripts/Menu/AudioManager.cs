@@ -8,9 +8,9 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] AudioMixer mixer;
 
-    public const string MUSIC_KEY = "MasterVolume";
+    public const string MUSIC_KEY = "MusicVolume";
 
-    private void Awake()
+    void Awake()
     {
         if (instance == null)
         {
@@ -28,7 +28,16 @@ public class AudioManager : MonoBehaviour
 
     void LoadVolume() //Volume saved in VolumeSettings.cs
     {
+        
         float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
-        mixer.SetFloat(VolumeSettings.MIXER_MUSIC, Mathf.Log10(musicVolume) *20); //
+        mixer.SetFloat(VolumeSettings.MIXER_MUSIC, Mathf.Log10(musicVolume) * 20);
+        //SetVolume(musicVolume);
+
     }
+    /*
+    public void SetVolume(float value)
+    {
+        Debug.Log(value);
+        mixer.SetFloat("MasterVolume", Mathf.Log10(value) * 20);
+    }*/
 }
