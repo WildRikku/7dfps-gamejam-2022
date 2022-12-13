@@ -17,8 +17,8 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     //private Color initColor;
     //private Color hoverColor;
 
-    private Sprite currentButtonImage;
-    public Sprite hoverButtonImage;
+    //private Sprite currentButtonImage;
+    //public Sprite hoverButtonImage;
     public Button button;
 
     private bool isClick = false;
@@ -38,7 +38,7 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         //initColor = obj_text.color;
         //initFontSize = obj_text.fontSize;
 
-        currentButtonImage = button.image.sprite;
+        //currentButtonImage = button.image.sprite;
     }
 
     //Mouse enter
@@ -50,7 +50,7 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         audioSource.clip = hover_sound;
         audioSource.Play();
 
-        button.image.sprite = hoverButtonImage;
+        //button.image.sprite = hoverButtonImage;
     }
 
     //Mouse leave
@@ -59,7 +59,7 @@ public class MenuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         //obj_text.color = initColor;
         //obj_text.fontSize = initFontSize;
 
-        button.image.sprite = currentButtonImage;
+        //button.image.sprite = currentButtonImage;
     }
 
     //Mouse click
