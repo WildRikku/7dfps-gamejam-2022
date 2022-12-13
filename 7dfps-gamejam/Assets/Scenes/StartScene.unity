@@ -253,7 +253,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 53720045}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -18.63, y: 15, z: 87.06}
+  m_LocalPosition: {x: -18.63, y: 14.84, z: 87.06}
   m_LocalScale: {x: 25, y: 1, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1849,8 +1849,8 @@ MonoBehaviour:
   CapsuleHeightStanding: 1.8
   CapsuleHeightCrouching: 0.9
   CrouchingSharpness: 10
-  FootstepSfxFrequency: 1
-  FootstepSfxFrequencyWhileSprinting: 1
+  FootstepSfxFrequency: 0.3
+  FootstepSfxFrequencyWhileSprinting: 0.2
   FootstepSfx: {fileID: 8300000, guid: 183021e6e2e12ab45880b96aa9995aeb, type: 3}
   JumpSfx: {fileID: 8300000, guid: bc44fee044e85b64dadf211cbb129aba, type: 3}
   LandSfx: {fileID: 8300000, guid: f69e9abdaeac6034ca1358259eacbeb6, type: 3}

@@ -57,6 +57,7 @@ namespace Unity.FPS.Gameplay
         public float JumpPadForce = 20f;
         public ParticleSystem jumpParticle;
 
+
         [Header("Stance")] [Tooltip("Ratio (0-1) of the character height where the camera will be at")]
         public float CameraHeightRatio = 0.9f;
 
@@ -486,37 +487,39 @@ namespace Unity.FPS.Gameplay
         //Made by Martin
         private void OnControllerColliderHit(ControllerColliderHit hit)
         {
-            switch(hit.gameObject.tag)
+            
+            switch (hit.gameObject.tag)
             {
                 case "JumpPad":
-                    JumpForce = JumpPadForce;
+                    if (HasJumpedThisFrame == false)
+                    {
+                        JumpForce = JumpPadForce;
 
-                    jumpParticle.Play();
-                    /*var emission = jumpParticle.emission;
-                    emission.enabled = true;
-                    */
+                        jumpParticle.Play();
+                        /*var emission = jumpParticle.emission;
+                        emission.enabled = true;
+                        */
 
-                    //Jump Scrip kopiert
-                    //--------------------------
-                    // start by canceling out the vertical component of our velocity
-                    CharacterVelocity = new Vector3(CharacterVelocity.x, 0f, CharacterVelocity.z);
+                        //Jump Scrip kopiert
+                        //--------------------------
+                        // start by canceling out the vertical component of our velocity
+                        CharacterVelocity = new Vector3(CharacterVelocity.x, 0f, CharacterVelocity.z);
 
-                    // then, add the jumpSpeed value upwards
-                    CharacterVelocity += Vector3.up * JumpForce;
+                        // then, add the jumpSpeed value upwards
+                        CharacterVelocity += Vector3.up * JumpForce;
 
-                    // play sound
-                    AudioSource.PlayOneShot(JumpPadSfx);
+                        // play sound
+                        AudioSource.PlayOneShot(JumpPadSfx);
 
-                    // remember last time we jumped because we need to prevent snapping to ground for a short time
-                    m_LastTimeJumped = Time.time;
-                    HasJumpedThisFrame = true;
+                        // remember last time we jumped because we need to prevent snapping to ground for a short time
+                        m_LastTimeJumped = Time.time;
+                        HasJumpedThisFrame = true;
 
-                    // Force grounding to false
-                    IsGrounded = false;
-                    m_GroundNormal = Vector3.up;
-
-                    
-                    //--------------------------
+                        // Force grounding to false
+                        IsGrounded = false;
+                        m_GroundNormal = Vector3.up;
+                        //--------------------------
+                    }
                     break;
                 case "Ground":
                     JumpForce = JumpBaseForce;
