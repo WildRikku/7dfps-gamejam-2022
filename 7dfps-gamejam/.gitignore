@@ -76,3 +76,7 @@ crashlytics-build.properties
 # IDE
 .idea
 .vsconfig
+
+# ODIN
+Assets/Plugins.meta
+Assets/Plugins/
