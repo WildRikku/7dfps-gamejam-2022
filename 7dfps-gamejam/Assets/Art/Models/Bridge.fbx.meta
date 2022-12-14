@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1ba8cb0af726006458c3d4d913ae0930
+guid: 13ef5d76da19bd541a283668a718c1bf
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -20,7 +20,7 @@ ModelImporter:
       name: Glow
     second: {fileID: 2100000, guid: 3f63f901c33f4bb49a25aeb33f1e08ef, type: 2}
   materials:
-    materialImportMode: 1
+    materialImportMode: 2
     materialName: 0
     materialSearch: 1
     materialLocation: 1
