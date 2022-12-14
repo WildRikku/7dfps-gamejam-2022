@@ -10,7 +10,7 @@ public class AudioManager : MonoBehaviour
 
     public const string MUSIC_KEY = "MusicVolume";
 
-    void Awake()
+    void Start()
     {
         if (instance == null)
         {
