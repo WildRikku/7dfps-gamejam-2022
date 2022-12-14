@@ -76,3 +76,12 @@ crashlytics-build.properties
 # IDE
 .idea
 .vsconfig
+
+# ODIN
+Assets/Plugins/Sirenix/*
+!Assets/Plugins/Sirenix/Assemblies
+!Assets/Plugins/Sirenix/Assemblies.meta
+Assets/Plugins/Sirenix/Assemblies/*
+!Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes*
+Assets/Scripts/Editor/OdinWatchWindow.cs
+Assets/Scripts/Editor/OdinWatchWindow.cs.meta

@@ -1,9 +1,24 @@
 fileFormatVersion: 2
-guid: 4e4c024786461e942817d79d8b66a112
+guid: 047cd42f96c84994380cc1f32cc13709
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Base
+    second: {fileID: 2100000, guid: 9202fbd8711d4d742ba94d925f001bec, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Floor
+    second: {fileID: 2100000, guid: e506f5f4e6a4db746b44f3ec2ce81b07, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glow
+    second: {fileID: 2100000, guid: 3f63f901c33f4bb49a25aeb33f1e08ef, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

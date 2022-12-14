@@ -3,6 +3,7 @@ using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Events;
+using Sirenix.OdinInspector;
 
 namespace Unity.FPS.AI
 {
@@ -64,6 +65,7 @@ namespace Unity.FPS.AI
         public AudioClip DamageTick;
 
         [Header("VFX")] [Tooltip("The VFX prefab spawned when the enemy dies")]
+        [AssetsOnly]
         public GameObject DeathVfx;
 
         [Tooltip("The point at which the death VFX is spawned")]

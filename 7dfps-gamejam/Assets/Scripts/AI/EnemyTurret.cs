@@ -127,7 +127,7 @@ namespace Unity.FPS.AI
                 RandomHitSparks[n].Play();
             }
 
-            Animator.SetTrigger(k_AnimOnDamagedParameter);
+            // Animator.SetTrigger(k_AnimOnDamagedParameter);
         }
 
         void OnDetectedTarget()
@@ -147,7 +147,7 @@ namespace Unity.FPS.AI
                 AudioUtility.CreateSFX(OnDetectSfx, transform.position, AudioUtility.AudioGroups.EnemyDetection, 1f);
             }
 
-            Animator.SetBool(k_AnimIsActiveParameter, true);
+            // Animator.SetBool(k_AnimIsActiveParameter, true);
             m_TimeStartedDetection = Time.time;
         }
 
@@ -163,7 +163,7 @@ namespace Unity.FPS.AI
                 OnDetectVfx[i].Stop();
             }
 
-            Animator.SetBool(k_AnimIsActiveParameter, false);
+            // Animator.SetBool(k_AnimIsActiveParameter, false);
             m_TimeLostDetection = Time.time;
         }
     }
