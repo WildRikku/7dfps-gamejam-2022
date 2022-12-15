@@ -254,6 +254,7 @@ namespace Unity.FPS.Gameplay
             if (ImpactSfxClip)
             {
                 AudioUtility.CreateSFX(ImpactSfxClip, point, AudioUtility.AudioGroups.Impact, 1f, 3f);
+            
             }
 
             // Self Destruct
