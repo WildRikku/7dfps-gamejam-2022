@@ -4831,7 +4831,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 51b4b159ffad18a408fe75b6f8ccbc2f, type: 2}
+  - {fileID: 2100000, guid: af1a4132fe0156d4ca6036043f2abddf, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4899,7 +4899,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2138433825
 Transform:
   m_ObjectHideFlags: 0
@@ -9713,7 +9713,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 133346923945d9f4db816ec7db12fd03, type: 2}
+  - {fileID: 2100000, guid: 6aec4b1263008044b97ad17485f78428, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19490,8 +19490,8 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a74eef6270cec6b4c9dfed0e7aa93cf6, type: 2}
-  - {fileID: 2100000, guid: a74eef6270cec6b4c9dfed0e7aa93cf6, type: 2}
+  - {fileID: 2100000, guid: 7c6e4f9ff6f36d24fb77f6bed3d298bd, type: 2}
+  - {fileID: 2100000, guid: 7c6e4f9ff6f36d24fb77f6bed3d298bd, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -19553,7 +19553,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 243414201558254368, guid: fcc71635aab95ff4fbdf1880bf2afa2f,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 65b7d1df144c6944cab9d6686649df0b, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 263930acb9da06f4d9e6813fcd7d7343, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1

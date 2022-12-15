@@ -26,11 +26,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4804157086313487717}
   m_LocalRotation: {x: 0.00002339482, y: 0.7071068, z: -0.7071068, w: 0.00002339482}
-  m_LocalPosition: {x: 0, y: 0, z: 2.0579998}
+  m_LocalPosition: {x: -0.361, y: 0.051, z: -1.463}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7577072751660813947}
+  m_Father: {fileID: 7779948518001799138}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -179.996}
 --- !u!33 &7827373993535943689
@@ -109,11 +109,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5515013659298638551}
   m_LocalRotation: {x: 0.7071068, y: 0.000110544264, z: -0.000110544264, w: 0.7071068}
-  m_LocalPosition: {x: 0.186, y: -0.02, z: 0.10099988}
+  m_LocalPosition: {x: -0.1750008, y: 0.031000085, z: -3.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7577072751660813947}
+  m_Father: {fileID: 7779948518001799138}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -0.018}
 --- !u!33 &6248007628492126347
@@ -192,11 +192,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6603280109869822715}
   m_LocalRotation: {x: -0.00002339482, y: 0.7071068, z: 0.7071068, w: 0.00002339482}
-  m_LocalPosition: {x: 0, y: 0, z: 1.813}
+  m_LocalPosition: {x: -0.361, y: 0.051, z: -1.708}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7577072751660813947}
+  m_Father: {fileID: 7779948518001799138}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 179.996}
 --- !u!33 &5679026269266380455
@@ -276,9 +276,14 @@ Transform:
   m_LocalPosition: {x: 0.361, y: -0.051, z: 3.521}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 2908117183012486337}
+  - {fileID: 7081370799761147604}
+  - {fileID: 6556549748326095838}
+  - {fileID: 3449382121711361274}
+  - {fileID: 7411253343569147574}
   m_Father: {fileID: 7577072751660813947}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7092319668101747905
 GameObject:
@@ -289,8 +294,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7577072751660813947}
-  - component: {fileID: 148181724477761640}
   - component: {fileID: 1715538536575916962}
+  - component: {fileID: 148181724477761640}
   m_Layer: 0
   m_Name: shotgun
   m_TagString: Untagged
@@ -310,16 +315,68 @@ Transform:
   m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2908117183012486337}
-  - {fileID: 7081370799761147604}
-  - {fileID: 6556549748326095838}
-  - {fileID: 3449382121711361274}
-  - {fileID: 7411253343569147574}
   - {fileID: 7779948518001799138}
   - {fileID: 3050325346238085610}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1715538536575916962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7092319668101747905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ad90ba0b1477764da373f5ec01a8cb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  WeaponName: Space Shotgun
+  WeaponIcon: {fileID: 21300000, guid: 7933663277a54dc498904eac0a70cb27, type: 3}
+  CrosshairDataDefault:
+    CrosshairSprite: {fileID: 21300000, guid: 02e728be0478bb742acd796ba1491ba3, type: 3}
+    CrosshairSize: 220
+    CrosshairColor: {r: 0.08962262, g: 1, b: 0.99143106, a: 1}
+  CrosshairDataTargetInSight:
+    CrosshairSprite: {fileID: 21300000, guid: 02e728be0478bb742acd796ba1491ba3, type: 3}
+    CrosshairSize: 220
+    CrosshairColor: {r: 0.9622642, g: 0, b: 0, a: 1}
+  WeaponRoot: {fileID: 6806577023840010995}
+  WeaponMuzzle: {fileID: 3050325346238085610}
+  ShootType: 0
+  ProjectilePrefab: {fileID: 8924682559891268397, guid: f05c7e6fbbfbe824388456bb4abff9d4,
+    type: 3}
+  DelayBetweenShots: 0.5
+  BulletSpreadAngle: 8
+  BulletsPerShot: 15
+  RecoilForce: 2
+  AimZoomRatio: 1
+  AimOffset: {x: 0, y: 0, z: 0}
+  AutomaticReload: 1
+  HasPhysicalBullets: 0
+  ClipSize: 30
+  ShellCasing: {fileID: 0}
+  EjectionPort: {fileID: 0}
+  ShellCasingEjectionForce: 2
+  ShellPoolSize: 1
+  AmmoReloadRate: 1
+  AmmoReloadDelay: 2
+  MaxAmmo: 8
+  AutomaticReleaseOnCharged: 0
+  MaxChargeDuration: 2
+  AmmoUsedOnStartCharge: 1
+  AmmoUsageRateWhileCharging: 1
+  WeaponAnimator: {fileID: 0}
+  MuzzleFlashPrefab: {fileID: 267157293079252611, guid: 11699fe414ac3174a89a3c6dd41b91a4,
+    type: 3}
+  UnparentMuzzleFlash: 0
+  ShootSfx: {fileID: 8300000, guid: a7fcc99678cfdbf4783b0855b0f96689, type: 3}
+  ChangeWeaponSfx: {fileID: 0}
+  UseContinuousShootSound: 0
+  ContinuousShootStartSfx: {fileID: 0}
+  ContinuousShootLoopSfx: {fileID: 0}
+  ContinuousShootEndSfx: {fileID: 0}
 --- !u!82 &148181724477761640
 AudioSource:
   m_ObjectHideFlags: 0
@@ -417,63 +474,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &1715538536575916962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7092319668101747905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ad90ba0b1477764da373f5ec01a8cb5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponName: Space Shotgun
-  WeaponIcon: {fileID: 21300000, guid: 8cbb10368086f014a8b7fc8932e7f436, type: 3}
-  CrosshairDataDefault:
-    CrosshairSprite: {fileID: 21300000, guid: 02e728be0478bb742acd796ba1491ba3, type: 3}
-    CrosshairSize: 220
-    CrosshairColor: {r: 0.08962262, g: 1, b: 0.99143106, a: 1}
-  CrosshairDataTargetInSight:
-    CrosshairSprite: {fileID: 21300000, guid: 02e728be0478bb742acd796ba1491ba3, type: 3}
-    CrosshairSize: 220
-    CrosshairColor: {r: 0.9622642, g: 0, b: 0, a: 1}
-  WeaponRoot: {fileID: 6806577023840010995}
-  WeaponMuzzle: {fileID: 3050325346238085610}
-  ShootType: 0
-  ProjectilePrefab: {fileID: 8924682559891268397, guid: f05c7e6fbbfbe824388456bb4abff9d4,
-    type: 3}
-  DelayBetweenShots: 0.5
-  BulletSpreadAngle: 8
-  BulletsPerShot: 15
-  RecoilForce: 2
-  AimZoomRatio: 1
-  AimOffset: {x: 0, y: 0, z: 0}
-  AutomaticReload: 1
-  HasPhysicalBullets: 0
-  ClipSize: 30
-  ShellCasing: {fileID: 0}
-  EjectionPort: {fileID: 0}
-  ShellCasingEjectionForce: 2
-  ShellPoolSize: 1
-  AmmoReloadRate: 1
-  AmmoReloadDelay: 2
-  MaxAmmo: 8
-  AutomaticReleaseOnCharged: 0
-  MaxChargeDuration: 2
-  AmmoUsedOnStartCharge: 1
-  AmmoUsageRateWhileCharging: 1
-  WeaponAnimator: {fileID: 0}
-  MuzzleFlashPrefab: {fileID: 267157293079252611, guid: 11699fe414ac3174a89a3c6dd41b91a4,
-    type: 3}
-  UnparentMuzzleFlash: 0
-  ShootSfx: {fileID: 8300000, guid: a7fcc99678cfdbf4783b0855b0f96689, type: 3}
-  ChangeWeaponSfx: {fileID: 0}
-  UseContinuousShootSound: 0
-  ContinuousShootStartSfx: {fileID: 0}
-  ContinuousShootLoopSfx: {fileID: 0}
-  ContinuousShootEndSfx: {fileID: 0}
 --- !u!1 &7282202810275307392
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,11 +500,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7282202810275307392}
   m_LocalRotation: {x: -0.00002339482, y: 0.7071068, z: 0.7071068, w: 0.00002339482}
-  m_LocalPosition: {x: 0, y: 0, z: 1.813}
+  m_LocalPosition: {x: -0.361, y: 0.051, z: -1.708}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7577072751660813947}
+  m_Father: {fileID: 7779948518001799138}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 179.996}
 --- !u!33 &8270506903304665367
@@ -583,11 +583,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7706525932594980758}
   m_LocalRotation: {x: 0.7071068, y: 0.000110544264, z: -0.000110544264, w: 0.7071068}
-  m_LocalPosition: {x: 0.035, y: -0.029, z: 0.101000026}
+  m_LocalPosition: {x: -0.3259974, y: 0.022000125, z: -3.4199998}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 7577072751660813947}
+  m_Father: {fileID: 7779948518001799138}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: -0.018}
 --- !u!33 &7051409106888121937
@@ -669,5 +669,5 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7577072751660813947}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
