@@ -335,19 +335,19 @@ MonoBehaviour:
   WeaponName: Space Shotgun
   WeaponIcon: {fileID: 21300000, guid: 7933663277a54dc498904eac0a70cb27, type: 3}
   CrosshairDataDefault:
-    CrosshairSprite: {fileID: 21300000, guid: 02e728be0478bb742acd796ba1491ba3, type: 3}
-    CrosshairSize: 220
+    CrosshairSprite: {fileID: 21300000, guid: 2d756aaadece56ad1a7bb1d4eae09a46, type: 3}
+    CrosshairSize: 100
     CrosshairColor: {r: 0.08962262, g: 1, b: 0.99143106, a: 1}
   CrosshairDataTargetInSight:
-    CrosshairSprite: {fileID: 21300000, guid: 02e728be0478bb742acd796ba1491ba3, type: 3}
-    CrosshairSize: 220
+    CrosshairSprite: {fileID: 21300000, guid: 2d756aaadece56ad1a7bb1d4eae09a46, type: 3}
+    CrosshairSize: 100
     CrosshairColor: {r: 0.9622642, g: 0, b: 0, a: 1}
   WeaponRoot: {fileID: 6806577023840010995}
   WeaponMuzzle: {fileID: 3050325346238085610}
   ShootType: 0
   ProjectilePrefab: {fileID: 8924682559891268397, guid: f05c7e6fbbfbe824388456bb4abff9d4,
     type: 3}
-  DelayBetweenShots: 0.5
+  DelayBetweenShots: 0.4
   BulletSpreadAngle: 8
   BulletsPerShot: 15
   RecoilForce: 2
@@ -355,14 +355,14 @@ MonoBehaviour:
   AimOffset: {x: 0, y: 0, z: 0}
   AutomaticReload: 1
   HasPhysicalBullets: 0
-  ClipSize: 30
+  ClipSize: 45
   ShellCasing: {fileID: 0}
   EjectionPort: {fileID: 0}
   ShellCasingEjectionForce: 2
   ShellPoolSize: 1
   AmmoReloadRate: 1
-  AmmoReloadDelay: 2
-  MaxAmmo: 8
+  AmmoReloadDelay: 1
+  MaxAmmo: 10
   AutomaticReleaseOnCharged: 0
   MaxChargeDuration: 2
   AmmoUsedOnStartCharge: 1
