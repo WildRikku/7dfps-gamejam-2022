@@ -2,103 +2,142 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections;
+using Sirenix.OdinInspector;
 
 namespace Unity.FPS.Gameplay
 {
     [RequireComponent(typeof(CharacterController), typeof(PlayerInputHandler), typeof(AudioSource))]
     public class PlayerCharacterController : MonoBehaviour
     {
+        [TabGroup("General")]
         [Header("References")] [Tooltip("Reference to the main camera used for the player")]
         public Camera PlayerCamera;
 
+        [TabGroup("General")]
         [Tooltip("Audio source for footsteps, jump, etc...")]
         public AudioSource AudioSource;
 
+        [TabGroup("General")]
         [Header("General")] [Tooltip("Force applied downward when in the air")]
         public float GravityDownForce = 20f;
 
+        [TabGroup("General")]
         [Tooltip("Physic layers checked to consider the player grounded")]
         public LayerMask GroundCheckLayers = -1;
 
+        [TabGroup("General")]
         [Tooltip("distance from the bottom of the character controller capsule to test for grounded")]
         public float GroundCheckDistance = 0.05f;
 
+        [TabGroup("Movement")]
         [Header("Movement")] [Tooltip("Max movement speed when grounded (when not sprinting)")]
         public float MaxSpeedOnGround = 10f;
 
+        [TabGroup("Movement")]
         [Tooltip(
             "Sharpness for the movement when grounded, a low value will make the player accelerate and decelerate slowly, a high value will do the opposite")]
         public float MovementSharpnessOnGround = 15;
 
+        [TabGroup("Movement")]
         [Tooltip("Max movement speed when crouching")] [Range(0, 1)]
         public float MaxSpeedCrouchedRatio = 0.5f;
 
+        [TabGroup("Movement")]
         [Tooltip("Max movement speed when not grounded")]
         public float MaxSpeedInAir = 10f;
 
+        [TabGroup("Movement")]
         [Tooltip("Acceleration speed when in the air")]
         public float AccelerationSpeedInAir = 25f;
 
+        [TabGroup("Movement")]
         [Tooltip("Multiplicator for the sprint speed (based on grounded speed)")]
         public float SprintSpeedModifier = 2f;
 
+        [TabGroup("Movement")]
         [Tooltip("Height at which the player dies instantly when falling off the map")]
         public float KillHeight = -50f;
 
+        [TabGroup("Movement")]
         [Header("Rotation")] [Tooltip("Rotation speed for moving the camera")]
         public float RotationSpeed = 200f;
 
+        [TabGroup("Movement")]
         [Range(0.1f, 1f)] [Tooltip("Rotation speed multiplier when aiming")]
         public float AimingRotationMultiplier = 0.4f;
 
+        [TabGroup("Jump")]
         [Header("Jump")] [Tooltip("Force applied upward when jumping")]
         private float JumpBaseForce = 9F;
+
+        [TabGroup("Jump")]
         public float JumpForce = 9F;
+
+        [TabGroup("Jump")]
         public float JumpPadForce = 20f;
+
+        [TabGroup("Jump")]
         public ParticleSystem jumpParticle;
 
-
+        [TabGroup("Stance")]
         [Header("Stance")] [Tooltip("Ratio (0-1) of the character height where the camera will be at")]
         public float CameraHeightRatio = 0.9f;
 
+        [TabGroup("Stance")]
         [Tooltip("Height of character when standing")]
         public float CapsuleHeightStanding = 1.8f;
 
+        [TabGroup("Stance")]
         [Tooltip("Height of character when crouching")]
         public float CapsuleHeightCrouching = 0.9f;
 
+        [TabGroup("Stance")]
         [Tooltip("Speed of crouching transitions")]
         public float CrouchingSharpness = 10f;
 
+        [TabGroup("SFX")]
         [Header("Audio")] [Tooltip("Amount of footstep sounds played when moving one meter")]
         public float FootstepSfxFrequency = 1f;
 
+        [TabGroup("SFX")]
         [Tooltip("Amount of footstep sounds played when moving one meter while sprinting")]
         public float FootstepSfxFrequencyWhileSprinting = 1f;
 
+        [TabGroup("SFX")]
         [Tooltip("Sound played for footsteps")]
         public AudioClip FootstepSfx;
 
+        [TabGroup("SFX")]
         [Tooltip("Sound played when jumping")] public AudioClip JumpSfx;
+
+        [TabGroup("SFX")]
         [Tooltip("Sound played when landing")] public AudioClip LandSfx;
+
+        [TabGroup("SFX")]
         [Tooltip("Sound played when JumpPad")] public AudioClip JumpPadSfx;
 
+        [TabGroup("SFX")]
         [Tooltip("Sound played when taking damage froma fall")]
         public AudioClip FallDamageSfx;
 
+        [TabGroup("Fall Dmg")]
         [Header("Fall Damage")]
         [Tooltip("Whether the player will recieve damage when hitting the ground at high speed")]
         public bool RecievesFallDamage;
 
+        [TabGroup("Fall Dmg")]
         [Tooltip("Minimun fall speed for recieving fall damage")]
         public float MinSpeedForFallDamage = 10f;
 
+        [TabGroup("Fall Dmg")]
         [Tooltip("Fall speed for recieving th emaximum amount of fall damage")]
         public float MaxSpeedForFallDamage = 30f;
 
+        [TabGroup("Fall Dmg")]
         [Tooltip("Damage recieved when falling at the mimimum speed")]
         public float FallDamageAtMinSpeed = 10f;
 
+        [TabGroup("Fall Dmg")]
         [Tooltip("Damage recieved when falling at the maximum speed")]
         public float FallDamageAtMaxSpeed = 50f;
 

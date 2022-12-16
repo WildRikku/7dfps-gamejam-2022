@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using Unity.FPS.Game;
 using UnityEngine;
 using UnityEngine.Events;
@@ -19,56 +20,73 @@ namespace Unity.FPS.Gameplay
         [Tooltip("List of weapon the player will start with")]
         public List<WeaponController> StartingWeapons = new List<WeaponController>();
 
+        [TabGroup("Refs")]
         [Header("References")] [Tooltip("Secondary camera used to avoid seeing weapon go throw geometries")]
         public Camera WeaponCamera;
 
+        [TabGroup("Refs")]
         [Tooltip("Parent transform where all weapon will be added in the hierarchy")]
         public Transform WeaponParentSocket;
 
+        [TabGroup("Refs")]
         [Tooltip("Position for weapons when active but not actively aiming")]
         public Transform DefaultWeaponPosition;
 
+        [TabGroup("Refs")]
         [Tooltip("Position for weapons when aiming")]
         public Transform AimingWeaponPosition;
 
+        [TabGroup("Refs")]
         [Tooltip("Position for innactive weapons")]
         public Transform DownWeaponPosition;
 
+        [TabGroup("Bob")]
         [Header("Weapon Bob")]
         [Tooltip("Frequency at which the weapon will move around in the screen when the player is in movement")]
         public float BobFrequency = 10f;
 
+        [TabGroup("Bob")]
         [Tooltip("How fast the weapon bob is applied, the bigger value the fastest")]
         public float BobSharpness = 10f;
 
+        [TabGroup("Bob")]
         [Tooltip("Distance the weapon bobs when not aiming")]
         public float DefaultBobAmount = 0.05f;
 
+        [TabGroup("Bob")]
         [Tooltip("Distance the weapon bobs when aiming")]
         public float AimingBobAmount = 0.02f;
 
+        [TabGroup("Recoil")]
         [Header("Weapon Recoil")]
         [Tooltip("This will affect how fast the recoil moves the weapon, the bigger the value, the fastest")]
         public float RecoilSharpness = 50f;
 
+        [TabGroup("Recoil")]
         [Tooltip("Maximum distance the recoil can affect the weapon")]
         public float MaxRecoilDistance = 0.5f;
 
+        [TabGroup("Recoil")]
         [Tooltip("How fast the weapon goes back to it's original position after the recoil is finished")]
         public float RecoilRestitutionSharpness = 10f;
 
+        [TabGroup("Misc")]
         [Header("Misc")] [Tooltip("Speed at which the aiming animatoin is played")]
         public float AimingAnimationSpeed = 10f;
 
+        [TabGroup("Misc")]
         [Tooltip("Field of view when not aiming")]
         public float DefaultFov = 60f;
 
+        [TabGroup("Misc")]
         [Tooltip("Portion of the regular FOV to apply to the weapon camera")]
         public float WeaponFovMultiplier = 1f;
 
+        [TabGroup("Misc")]
         [Tooltip("Delay before switching weapon a second time, to avoid recieving multiple inputs from mouse wheel. Also determines the time it takes to switch weapons")]
         public float WeaponSwitchDelay = 1f;
 
+        [TabGroup("Misc")]
         [Tooltip("Layer to set FPS weapon gameObjects to")]
         public LayerMask FpsWeaponLayer;
 
