@@ -66,7 +66,7 @@ namespace Unity.FPS.Gameplay
         [Tooltip("Portion of the regular FOV to apply to the weapon camera")]
         public float WeaponFovMultiplier = 1f;
 
-        [Tooltip("Delay before switching weapon a second time, to avoid recieving multiple inputs from mouse wheel")]
+        [Tooltip("Delay before switching weapon a second time, to avoid recieving multiple inputs from mouse wheel. Also determines the time it takes to switch weapons")]
         public float WeaponSwitchDelay = 1f;
 
         [Tooltip("Layer to set FPS weapon gameObjects to")]
