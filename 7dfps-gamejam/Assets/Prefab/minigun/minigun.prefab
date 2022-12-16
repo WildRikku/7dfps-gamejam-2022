@@ -82,11 +82,11 @@ MonoBehaviour:
   WeaponName: Space Shotgun
   WeaponIcon: {fileID: 21300000, guid: 7933663277a54dc498904eac0a70cb27, type: 3}
   CrosshairDataDefault:
-    CrosshairSprite: {fileID: 21300000, guid: 2d756aaadece56ad1a7bb1d4eae09a46, type: 3}
+    CrosshairSprite: {fileID: 21300000, guid: dd699c13a7ae38cd3a759cb52cd90887, type: 3}
     CrosshairSize: 100
     CrosshairColor: {r: 0.08962262, g: 1, b: 0.99143106, a: 1}
   CrosshairDataTargetInSight:
-    CrosshairSprite: {fileID: 21300000, guid: 2d756aaadece56ad1a7bb1d4eae09a46, type: 3}
+    CrosshairSprite: {fileID: 21300000, guid: dd699c13a7ae38cd3a759cb52cd90887, type: 3}
     CrosshairSize: 100
     CrosshairColor: {r: 0.9622642, g: 0, b: 0, a: 1}
   WeaponRoot: {fileID: 6806577023840010995}
