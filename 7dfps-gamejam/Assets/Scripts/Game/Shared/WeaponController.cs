@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -34,99 +35,147 @@ namespace Unity.FPS.Game
         [Tooltip("The image that will be displayed in the UI for this weapon")]
         public Sprite WeaponIcon;
 
+        [TabGroup("Aim")]
         [Tooltip("Default data for the crosshair")]
         public CrosshairData CrosshairDataDefault;
 
+        [TabGroup("Aim")]
         [Tooltip("Data for the crosshair when targeting an enemy")]
         public CrosshairData CrosshairDataTargetInSight;
 
+        [TabGroup("Aim")]
         [Header("Internal References")]
         [Tooltip("The root object for the weapon, this is what will be deactivated when the weapon isn't active")]
         public GameObject WeaponRoot;
 
+        [TabGroup("Aim")]
         [Tooltip("Tip of the weapon, where the projectiles are shot")]
         public Transform WeaponMuzzle;
 
+        [TabGroup("Shoot")]
         [Header("Shoot Parameters")] [Tooltip("The type of weapon wil affect how it shoots")]
         public WeaponShootType ShootType;
 
+        [TabGroup("Shoot")]
         [Tooltip("The projectile prefab")] public ProjectileBase ProjectilePrefab;
 
+        [TabGroup("Shoot")]
         [Tooltip("Minimum duration between two shots")]
         public float DelayBetweenShots = 0.5f;
 
+        [TabGroup("Shoot")]
         [Tooltip("Angle for the cone in which the bullets will be shot randomly (0 means no spread at all)")]
         public float BulletSpreadAngle = 0f;
 
+        [TabGroup("Shoot")]
         [Tooltip("Amount of bullets per shot")]
         public int BulletsPerShot = 1;
 
+        [TabGroup("Shoot")]
         [Tooltip("Force that will push back the weapon after each shot")] [Range(0f, 2f)]
         public float RecoilForce = 1;
 
+        [TabGroup("Shoot")]
         [Tooltip("Ratio of the default FOV that this weapon applies while aiming")] [Range(0f, 1f)]
         public float AimZoomRatio = 1f;
 
+        [TabGroup("Shoot")]
         [Tooltip("Translation to apply to weapon arm when aiming with this weapon")]
         public Vector3 AimOffset;
 
+        [TabGroup("Ammo")]
         [Header("Ammo Parameters")]
         [Tooltip("Should the player manually reload")]
         public bool AutomaticReload = true;
+
+        [TabGroup("Ammo")]
         [Tooltip("Has physical clip on the weapon and ammo shells are ejected when firing")]
         public bool HasPhysicalBullets = false;
+
+        [TabGroup("Ammo")]
         [Tooltip("Number of bullets in a clip")]
         public int ClipSize = 30;
+
+        [TabGroup("Ammo")]
         [Tooltip("Bullet Shell Casing")]
         public GameObject ShellCasing;
+
+        [TabGroup("Ammo")]
         [Tooltip("Weapon Ejection Port for physical ammo")]
         public Transform EjectionPort;
+
+        [TabGroup("Ammo")]
         [Tooltip("Force applied on the shell")]
         [Range(0.0f, 5.0f)] public float ShellCasingEjectionForce = 2.0f;
+
+        [TabGroup("Ammo")]
         [Tooltip("Maximum number of shell that can be spawned before reuse")]
         [Range(1, 30)] public int ShellPoolSize = 1;
+
+        [TabGroup("Ammo")]
         [Tooltip("Amount of ammo reloaded per second")]
         public float AmmoReloadRate = 1f;
 
+        [TabGroup("Ammo")]
         [Tooltip("Delay after the last shot before starting to reload")]
         public float AmmoReloadDelay = 2f;
 
+        [TabGroup("Ammo")]
         [Tooltip("Maximum amount of ammo in the gun")]
         public int MaxAmmo = 8;
 
+        [TabGroup("Charging")]
         [Header("Charging parameters (charging weapons only)")]
         [Tooltip("Trigger a shot when maximum charge is reached")]
         public bool AutomaticReleaseOnCharged;
 
+        [TabGroup("Charging")]
         [Tooltip("Duration to reach maximum charge")]
         public float MaxChargeDuration = 2f;
 
+        [TabGroup("Charging")]
         [Tooltip("Initial ammo used when starting to charge")]
         public float AmmoUsedOnStartCharge = 1f;
 
+        [TabGroup("Charging")]
         [Tooltip("Additional ammo used when charge reaches its maximum")]
         public float AmmoUsageRateWhileCharging = 1f;
 
+        [TabGroup("FX")]
         [Header("Audio & Visual")] 
         [Tooltip("Optional weapon animator for OnShoot animations")]
         public Animator WeaponAnimator;
 
+        [TabGroup("FX")]
         [Tooltip("Prefab of the muzzle flash")]
         public GameObject MuzzleFlashPrefab;
 
+        [TabGroup("FX")]
         [Tooltip("Unparent the muzzle flash instance on spawn")]
         public bool UnparentMuzzleFlash;
 
+        [TabGroup("FX")]
         [Tooltip("sound played when shooting")]
         public AudioClip ShootSfx;
 
+        [TabGroup("FX")]
         [Tooltip("Sound played when changing to this weapon")]
         public AudioClip ChangeWeaponSfx;
 
-        [Tooltip("Continuous Shooting Sound")] public bool UseContinuousShootSound = false;
+        [TabGroup("FX")]
+        [Tooltip("Continuous Shooting Sound")]
+        public bool UseContinuousShootSound = false;
+
+        [TabGroup("FX")]
         public AudioClip ContinuousShootStartSfx;
+
+        [TabGroup("FX")]
         public AudioClip ContinuousShootLoopSfx;
+
+        [TabGroup("FX")]
         public AudioClip ContinuousShootEndSfx;
+
+        [TabGroup("FX")]
         AudioSource m_ContinuousShootAudioSource = null;
         bool m_WantsToShoot = false;
 
