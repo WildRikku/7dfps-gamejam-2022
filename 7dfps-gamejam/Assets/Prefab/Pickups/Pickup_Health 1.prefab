@@ -80,8 +80,7 @@ MonoBehaviour:
   VerticalBobFrequency: 1
   BobbingAmount: 0.3
   RotatingSpeed: 90
-  pickupSource: {fileID: -2274373737050740765}
-  PickupSfx: {fileID: 8300000, guid: 48811f0feb501a8408f3720c0767a7fb, type: 3}
+  PickupSfx: {fileID: 8300000, guid: 9c38651727f3897fabb42035b9f5294b, type: 3}
   PickupVfxPrefab: {fileID: 18133231791472539, guid: 2fc8ac395697f084d8855ba2eccb7d86,
     type: 3}
   HealAmount: 40
