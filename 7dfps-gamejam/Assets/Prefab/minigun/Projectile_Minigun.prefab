@@ -58,7 +58,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 63
   Speed: 100
-  GravityDownAcceleration: 20
+  GravityDownAcceleration: 2
   TrajectoryCorrectionDistance: -1
   InheritWeaponVelocity: 0
   Damage: 7
