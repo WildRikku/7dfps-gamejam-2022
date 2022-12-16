@@ -372,7 +372,7 @@ MonoBehaviour:
     type: 3}
   UnparentMuzzleFlash: 0
   ShootSfx: {fileID: 8300000, guid: a7fcc99678cfdbf4783b0855b0f96689, type: 3}
-  ChangeWeaponSfx: {fileID: 0}
+  ChangeWeaponSfx: {fileID: 8300000, guid: d875dbc77b40a464db998f6110392ebf, type: 3}
   UseContinuousShootSound: 0
   ContinuousShootStartSfx: {fileID: 0}
   ContinuousShootLoopSfx: {fileID: 0}

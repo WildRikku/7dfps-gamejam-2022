@@ -97,7 +97,7 @@ MonoBehaviour:
   DelayBetweenShots: 0.1
   BulletSpreadAngle: 3
   BulletsPerShot: 1
-  RecoilForce: 2
+  RecoilForce: 1
   AimZoomRatio: 1
   AimOffset: {x: 0, y: 0, z: 0}
   AutomaticReload: 1
@@ -115,11 +115,11 @@ MonoBehaviour:
   AmmoUsedOnStartCharge: 1
   AmmoUsageRateWhileCharging: 1
   WeaponAnimator: {fileID: 0}
-  MuzzleFlashPrefab: {fileID: 267157293079252611, guid: 11699fe414ac3174a89a3c6dd41b91a4,
+  MuzzleFlashPrefab: {fileID: 267157293079252611, guid: 87b05f0bc901a912b9f5a3caaa79417f,
     type: 3}
   UnparentMuzzleFlash: 0
   ShootSfx: {fileID: 8300000, guid: a7fcc99678cfdbf4783b0855b0f96689, type: 3}
-  ChangeWeaponSfx: {fileID: 0}
+  ChangeWeaponSfx: {fileID: 8300000, guid: d770cd1ebc4805b43bd75c53d9844182, type: 3}
   UseContinuousShootSound: 0
   ContinuousShootStartSfx: {fileID: 0}
   ContinuousShootLoopSfx: {fileID: 0}
