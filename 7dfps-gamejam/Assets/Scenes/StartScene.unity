@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276844, g: 0.21589246, b: 0.2978263, a: 1}
+  m_IndirectSpecularColor: {r: 0.172775, g: 0.2159008, b: 0.29783508, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11659,7 +11659,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartingWeapons:
-  - {fileID: 1715538536575916962, guid: 2c0a1a40aaa7bee44b8650e0aa110c98, type: 3}
+  - {fileID: 1715538536575916962, guid: b65345f55c2353cff98f999201f81df0, type: 3}
   WeaponCamera: {fileID: 1376760960}
   WeaponParentSocket: {fileID: 754712897}
   DefaultWeaponPosition: {fileID: 285780221}
