@@ -7,18 +7,19 @@ namespace Unity.FPS.Game
     {
         public AudioMixer[] AudioMixers;
 
-        public AudioMixerGroup[] FindMatchingGroups(string subPath)
-        {
+        public AudioMixerGroup[] FindMatchingGroups(string subPath) {
+            AudioMixerGroup[] results = {};
+            
             for (int i = 0; i < AudioMixers.Length; i++)
             {
-                AudioMixerGroup[] results = AudioMixers[i].FindMatchingGroups(subPath);
+                results = AudioMixers[i].FindMatchingGroups(subPath);
                 if (results != null && results.Length != 0)
                 {
                     return results;
                 }
             }
 
-            return null;
+            return results;
         }
 
         public void SetFloat(string name, float value)
