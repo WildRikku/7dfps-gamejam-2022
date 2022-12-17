@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 7577072751660813947}
   - component: {fileID: 1715538536575916962}
   - component: {fileID: 148181724477761640}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: minigun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -79,8 +79,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ad90ba0b1477764da373f5ec01a8cb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: Space Shotgun
-  WeaponIcon: {fileID: 21300000, guid: 7933663277a54dc498904eac0a70cb27, type: 3}
+  WeaponName: Minigun
+  WeaponIcon: {fileID: 21300000, guid: b12a10d291633db418e16097b3d799b2, type: 3}
   CrosshairDataDefault:
     CrosshairSprite: {fileID: 21300000, guid: dd699c13a7ae38cd3a759cb52cd90887, type: 3}
     CrosshairSize: 100
@@ -313,6 +313,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -7314745045437555281, guid: 85d1718bd3fc7cce49d910191fba5c50,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.252
+      objectReference: {fileID: 0}
+    - target: {fileID: -7314745045437555281, guid: 85d1718bd3fc7cce49d910191fba5c50,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.127
+      objectReference: {fileID: 0}
+    - target: {fileID: -5861409178561632961, guid: 85d1718bd3fc7cce49d910191fba5c50,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.252
+      objectReference: {fileID: 0}
+    - target: {fileID: -5861409178561632961, guid: 85d1718bd3fc7cce49d910191fba5c50,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.127
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 85d1718bd3fc7cce49d910191fba5c50,
         type: 3}
