@@ -32,6 +32,9 @@ namespace Unity.FPS.Gameplay
         [TabGroup("Movement")]
         [Header("Movement")] [Tooltip("Max movement speed when grounded (when not sprinting)")]
         public float MaxSpeedOnGround = 10f;
+        public float MaxSpeedOnSpeedPlane = 20f;
+        private float BaseMaxSpeedOnGround = 10f;
+        public float SlowSpeedOnSpeedPlane = 5f;
 
         [TabGroup("Movement")]
         [Tooltip(
@@ -216,7 +219,10 @@ namespace Unity.FPS.Gameplay
 
             //JumpPad
             JumpBaseForce = JumpForce;
-        }
+
+            //SpeedPlane
+            BaseMaxSpeedOnGround = MaxSpeedOnGround;
+    }
 
         void Update()
         {
@@ -562,10 +568,27 @@ namespace Unity.FPS.Gameplay
                     break;
                 case "Ground":
                     JumpForce = JumpBaseForce;
-                break;
+                    RecievesFallDamage = true;
+                    MaxSpeedOnGround = BaseMaxSpeedOnGround;
+                    break;
+                case "FallDamageOff":
+                    JumpForce = JumpBaseForce;
+                    RecievesFallDamage = false;
+                    MaxSpeedOnGround = BaseMaxSpeedOnGround;
+                    break;
+                case "Speed":
+                    JumpForce = JumpBaseForce;
+                    MaxSpeedOnGround = MaxSpeedOnSpeedPlane;
+                    RecievesFallDamage = true;
+                    break;
+                case "Slow":
+                    JumpForce = JumpBaseForce;
+                    MaxSpeedOnGround = SlowSpeedOnSpeedPlane;
+                    RecievesFallDamage = true;
+                    break;
             }
 
-            //Debug.Log(hit.gameObject.tag);
+            Debug.Log(hit.gameObject.tag);
         }
 
         
