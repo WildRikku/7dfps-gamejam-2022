@@ -28,9 +28,9 @@ public class JumpPadMoveZ : MonoBehaviour
                 moveFlag = true;
             }
         }
-      
+
         //negative Bewegung in z-Richtung
-        if (transform.position.z >= startZ  && moveFlag == true)
+        if (transform.position.z >= startZ && moveFlag == true)
         {
             transform.Translate(0, 0, move_speed * Time.deltaTime * (-1));
             if (transform.position.z <= startZ)
@@ -38,7 +38,7 @@ public class JumpPadMoveZ : MonoBehaviour
                 moveFlag = false;
             }
         }
-  
+
 
     }
 }
