@@ -125,7 +125,7 @@ MonoBehaviour:
     m_NumColorKeys: 3
     m_NumAlphaKeys: 2
   FlashOnHitDuration: 0.125
-  DamageTick: {fileID: 0}
+  DamageTick: {fileID: 8300000, guid: c7d0db476b41e374f904bf664ee19526, type: 3}
   DeathVfx: {fileID: 8950624839484268180, guid: 45ce85b82008be84287f2c7e5bf07647,
     type: 3}
   DeathVfxSpawnPoint: {fileID: 7562257366884333791}
@@ -161,10 +161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TurretPivot: {fileID: 7562257366884333791}
-  TurretAimPoint: {fileID: 0}
+  TurretAimPoint: {fileID: 7562257366884333791}
   Animator: {fileID: 0}
-  AimRotationSharpness: 1
-  LookAtRotationSharpness: 210
+  AimRotationSharpness: 2.5
+  LookAtRotationSharpness: 5
   DetectionFireDelay: 1
   AimingTransitionBlendTime: 1
   RandomHitSparks: []
