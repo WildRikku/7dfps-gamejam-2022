@@ -19,26 +19,50 @@ public class JumpPadMoveX : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //positive Bewegung in x-Richtung
-        if (transform.position.x <= startX + move_range_x && moveFlag == false)
+        if (move_range_x > 0)
         {
-            transform.Translate(move_speed * Time.deltaTime, 0, 0);
-            if (transform.position.x >= startX + move_range_x)
+            //positive Bewegung in x-Richtung---
+            if (transform.position.x <= startX + move_range_x && moveFlag == false)
             {
-                moveFlag = true;
+                transform.Translate(move_speed * Time.deltaTime, 0, 0);
+                if (transform.position.x >= startX + move_range_x)
+                {
+                    moveFlag = true;
+                }
+            }
+
+            //negative Bewegung in x-Richtung
+            if (transform.position.x >= startX && moveFlag == true)
+            {
+                transform.Translate(move_speed * Time.deltaTime * (-1), 0, 0);
+                if (transform.position.x <= startX)
+                {
+                    moveFlag = false;
+                }
             }
         }
-      
-        //negative Bewegung in x-Richtung
-        if (transform.position.x >= startX  && moveFlag == true)
+        //----------------
+        else
         {
-            transform.Translate(move_speed * Time.deltaTime * (-1), 0, 0);
-            if (transform.position.x <= startX)
+            if (transform.position.x >= startX + move_range_x && moveFlag == false)
             {
-                moveFlag = false;
+                transform.Translate(move_speed * Time.deltaTime*(-1), 0, 0);
+                if (transform.position.x <= startX + move_range_x)
+                {
+                    moveFlag = true;
+                }
+            }
+
+            //negative Bewegung in x-Richtung
+            if (transform.position.x <= startX && moveFlag == true)
+            {
+                transform.Translate(move_speed * Time.deltaTime, 0, 0);
+                if (transform.position.x >= startX)
+                {
+                    moveFlag = false;
+                }
             }
         }
-  
 
     }
 }
