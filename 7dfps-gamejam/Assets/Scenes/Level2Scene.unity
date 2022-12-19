@@ -660,7 +660,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EndSceneLoadDelay: 1
   EndGameFadeCanvasGroup: {fileID: 730575262}
-  WinSceneName: WinScene
+  WinSceneName: Level3Scene
   DelayBeforeFadeToBlack: 2
   WinGameMessage: All objectives completed
   DelayBeforeWinMessage: 1

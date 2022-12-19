@@ -29,7 +29,7 @@ public class AudioManager : MonoBehaviour
     void LoadVolume() //Volume saved in VolumeSettings.cs
     {
         
-        float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 1f);
+        float musicVolume = PlayerPrefs.GetFloat(MUSIC_KEY, 0.6f);
         mixer.SetFloat(VolumeSettings.MIXER_MUSIC, Mathf.Log10(musicVolume) * 20);
         //SetVolume(musicVolume);
 
