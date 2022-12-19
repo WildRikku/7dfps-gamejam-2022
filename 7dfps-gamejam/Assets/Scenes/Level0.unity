@@ -437,7 +437,7 @@ MonoBehaviour:
   WinGameMessage: All objectives completed
   DelayBeforeWinMessage: 1
   VictorySound: {fileID: 8300000, guid: 10e32716dc1581e439c7423bdbad0e7e, type: 3}
-  LoseSceneName: StartScene
+  LoseSceneName: Level0
 --- !u!4 &154820087
 Transform:
   m_ObjectHideFlags: 0
