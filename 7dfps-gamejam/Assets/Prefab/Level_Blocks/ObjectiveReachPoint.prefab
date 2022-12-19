@@ -4934,8 +4934,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37fff5bb19450134f9e207f3823811fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Title: Erreiche die Raumbasis
-  Description: Den Punkt!
+  Title: Reach the flags
+  Description: Collect the light beams
   IsOptional: 0
   DelayVisible: 4
   DestroyRoot: {fileID: 5565487983073099157}
