@@ -1515,10 +1515,10 @@ MonoBehaviour:
   JumpPadSfx: {fileID: 8300000, guid: b0acf1175f80a474db0c0560b6928102, type: 3}
   FallDamageSfx: {fileID: 8300000, guid: f69e9abdaeac6034ca1358259eacbeb6, type: 3}
   RecievesFallDamage: 1
-  MinSpeedForFallDamage: 10
-  MaxSpeedForFallDamage: 30
+  MinSpeedForFallDamage: 15
+  MaxSpeedForFallDamage: 40
   FallDamageAtMinSpeed: 10
-  FallDamageAtMaxSpeed: 50
+  FallDamageAtMaxSpeed: 30
 --- !u!82 &646582437
 AudioSource:
   m_ObjectHideFlags: 0
