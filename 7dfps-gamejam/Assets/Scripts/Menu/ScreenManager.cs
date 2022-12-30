@@ -44,6 +44,7 @@ public class ScreenManager : MonoBehaviour
         if (playAudio == false)
         {
             playAudio = true;
+            PlayerPrefs.SetInt("DcSaveTemp", 0);
             asyncLoad.allowSceneActivation = true;
         }
     }

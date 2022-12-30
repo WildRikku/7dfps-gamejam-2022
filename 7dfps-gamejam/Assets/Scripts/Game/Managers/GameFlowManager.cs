@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 namespace Unity.FPS.Game
@@ -27,6 +28,11 @@ namespace Unity.FPS.Game
         [Header("Lose")] [Tooltip("This string has to be the name of the scene you want to load when losing")]
         public string LoseSceneName = "LoseScene";
 
+        [Header("Deathcounter")]
+        public Text deathcounterText;
+        public int deathcounterValue = 0;
+        public const string DCSAVETEMP = "DcSaveTemp";
+
 
         public bool GameIsEnding { get; private set; }
 
@@ -37,15 +43,22 @@ namespace Unity.FPS.Game
         {
             EventManager.AddListener<AllObjectivesCompletedEvent>(OnAllObjectivesCompleted);
             EventManager.AddListener<PlayerDeathEvent>(OnPlayerDeath);
+
+            deathcounterValue = PlayerPrefs.GetInt(DCSAVETEMP, 0);
         }
 
         void Start()
         {
             AudioUtility.SetMasterVolume(1);
+
+           
+            deathcounterText.text = deathcounterValue.ToString();
         }
 
         void Update()
         {
+            
+
             if (GameIsEnding)
             {
                  float timeRatio = 1 - (m_TimeLoadEndGameScene - Time.time) / EndSceneLoadDelay;
@@ -101,9 +114,19 @@ namespace Unity.FPS.Game
             }
             else
             {
+                DeathCounterUP();
+
                 m_SceneToLoad = LoseSceneName;
                 m_TimeLoadEndGameScene = Time.time + EndSceneLoadDelay;
             }
+        }
+
+        public void DeathCounterUP()
+        {
+            deathcounterValue = deathcounterValue + 1;
+            PlayerPrefs.SetInt(DCSAVETEMP, deathcounterValue);
+
+            deathcounterText.text = deathcounterValue.ToString();
         }
 
         void OnDestroy()

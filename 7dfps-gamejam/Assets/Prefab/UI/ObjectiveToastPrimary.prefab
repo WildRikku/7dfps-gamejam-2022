@@ -624,7 +624,7 @@ MonoBehaviour:
   CompletionDelay: 0.35
   FadeInDuration: 0.5
   FadeOutDuration: 2
-  InitSound: {fileID: 8300000, guid: 9c38651727f3897fabb42035b9f5294b, type: 3}
+  InitSound: {fileID: 8300000, guid: 183021e6e2e12ab45880b96aa9995aeb, type: 3}
   CompletedSound: {fileID: 8300000, guid: b0acf1175f80a474db0c0560b6928102, type: 3}
   MoveInDuration: 0.5
   MoveInCurve:
