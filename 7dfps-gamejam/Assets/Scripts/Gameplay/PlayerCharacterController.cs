@@ -587,8 +587,6 @@ namespace Unity.FPS.Gameplay
                     RecievesFallDamage = true;
                     break;
             }
-
-            Debug.Log(hit.gameObject.tag);
         }
 
         
