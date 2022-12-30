@@ -90,7 +90,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.418
+    m_Value: 0.345
   smoothness:
     m_OverrideState: 1
     m_Value: 0.281
@@ -118,7 +118,7 @@ MonoBehaviour:
     m_Value: 50
   gaussianEnd:
     m_OverrideState: 1
-    m_Value: 200
+    m_Value: 100
   gaussianMaxRadius:
     m_OverrideState: 1
     m_Value: 1.5
