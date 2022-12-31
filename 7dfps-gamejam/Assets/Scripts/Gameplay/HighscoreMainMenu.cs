@@ -14,6 +14,7 @@ public class HighscoreMainMenu : MonoBehaviour
 
     void Start()
     {
+        Debug.Log(highscoreValue.ToString());
         scoreText.text = highscoreValue.ToString();
     }
 }

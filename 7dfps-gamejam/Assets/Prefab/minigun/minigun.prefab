@@ -923,7 +923,7 @@ MonoBehaviour:
   MaxChargeDuration: 2
   AmmoUsedOnStartCharge: 1
   AmmoUsageRateWhileCharging: 1
-  WeaponAnimator: {fileID: 1274760430194966596}
+  WeaponAnimator: {fileID: 0}
   MuzzleFlashPrefab: {fileID: 267157293079252611, guid: 87b05f0bc901a912b9f5a3caaa79417f,
     type: 3}
   UnparentMuzzleFlash: 0

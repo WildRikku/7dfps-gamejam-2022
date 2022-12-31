@@ -27,11 +27,13 @@ public class WinScore : MonoBehaviour
             if (highscoreValue == 0) //first run
             {
                 highscoreText.text = highScoreString;
+                highscoreValue = currentTriesValue;
                 PlayerPrefs.SetInt("DcSave", highscoreValue);
             }
             else if (currentTriesValue < highscoreValue)
             { 
                 highscoreText.text = highScoreString;
+                highscoreValue = currentTriesValue;
                 PlayerPrefs.SetInt("DcSave", highscoreValue);
             }
         }
